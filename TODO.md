@@ -15,7 +15,8 @@ Enable an autonomous research workflow where the model can search, open, extract
 - [X] Activate virtual environment
 - [X] Install dependencies
 - [X] Install Playwright Firefox browser
-- [X] Create requirements.txt
+- [X] Initialize pyproject.toml (uv)
+- [X] Lock dependencies using uv.lock
 
 Dependencies:
 
@@ -94,6 +95,37 @@ Tasks:
 Architecture:
 
 Codex → MCP → server.py → controller.py → modules
+
+---
+
+# Phase 2.5 — Interfaces & Contracts
+
+Define clean interfaces between modules.
+
+Tasks:
+
+- [ ] Define search result schema
+- [ ] Define extracted content schema
+- [ ] Define state structure
+- [ ] Define controller response format
+- [ ] Define MCP tool input/output schema
+
+Example:
+
+SearchResult:
+{
+  title: str
+  url: str
+  snippet: str
+}
+
+ExtractedContent:
+{
+  title: str
+  headings: list[str]
+  content: str
+  code_blocks: list[str]
+}
 
 ---
 
