@@ -29,7 +29,7 @@ class Browser:
         self.page = self.browser.new_page()
 
     # ----------------------------
-    # Open Page (Improved)
+    # Open Page (Improved Errors)
     # ----------------------------
 
     def open_page(self, url: str) -> bool:
@@ -39,10 +39,7 @@ class Browser:
             if not url.startswith("http"):
                 url = "https://" + url
 
-            # Navigate to page
             self.page.goto(url, timeout=DEFAULT_TIMEOUT)
-
-            # 🔥 NEW: wait until DOM is loaded
             self.page.wait_for_load_state("domcontentloaded")
 
             state.set_current_url(url)
@@ -53,29 +50,35 @@ class Browser:
             print(f"[Timeout] Failed to load: {url}")
             return False
 
-        except Exception as e:
-            print(f"[Error] {e}")
+        except Exception:
+            print(f"[Error] Failed to open {url}")
             return False
 
     # ----------------------------
-    # Get HTML
+    # Get HTML (Safe)
     # ----------------------------
 
     def get_html(self) -> Optional[str]:
         if not self.page:
             return None
 
-        return self.page.content()
+        try:
+            return self.page.content()
+        except Exception:
+            return None
 
     # ----------------------------
-    # Get Title
+    # Get Title (Safe)
     # ----------------------------
 
     def get_title(self) -> Optional[str]:
         if not self.page:
             return None
 
-        return self.page.title()
+        try:
+            return self.page.title()
+        except Exception:
+            return None
 
     # ----------------------------
     # Extract Links
@@ -85,9 +88,12 @@ class Browser:
         if not self.page:
             return []
 
-        links = self.page.eval_on_selector_all(
-            "a", "elements => elements.map(el => el.href)"
-        )
+        try:
+            links = self.page.eval_on_selector_all(
+                "a", "elements => elements.map(el => el.href)"
+            )
+        except Exception:
+            return []
 
         cleaned_links = []
         base_url = state.get_current_url()

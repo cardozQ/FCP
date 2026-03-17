@@ -189,14 +189,14 @@ close_browser()
 
 Tasks:
 
-- [ ] Launch Firefox
-- [ ] Support headless mode
-- [ ] Support visible browser mode
-- [ ] Implement navigation
-- [ ] Retrieve page HTML
-- [ ] Extract links
-- [ ] Handle navigation timeout
-- [ ] Handle invalid URLs
+- [X] Launch Firefox
+- [X] Support headless mode
+- [X] Support visible browser mode
+- [X] Implement navigation
+- [X] Retrieve page HTML
+- [X] Extract links
+- [X] Handle navigation timeout
+- [X] Handle invalid URLs
 
 ---
 
