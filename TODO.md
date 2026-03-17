@@ -155,11 +155,11 @@ cached_content
 
 Tasks:
 
-- [ ] Implement state manager
-- [ ] Track visited URLs
-- [ ] Track history
-- [ ] Store last search results
-- [ ] Implement simple content cache
+- [X] Implement state manager
+- [X] Track visited URLs
+- [X] Track history
+- [X] Store last search results
+- [X] Implement simple content cache
 
 ---
 
