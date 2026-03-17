@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "firefox-web": {
+      "command": "python3",
+      "args": ["src/server.py"]
+    }
+  }
+}

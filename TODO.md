@@ -63,10 +63,10 @@ firefox-mcp/
 
 Tasks:
 
-- [ ] Create directory structure
-- [ ] Create empty module files
-- [ ] Create logs directory
-- [ ] Initialize logging system
+- [X] Create directory structure
+- [X] Create empty module files
+- [X] Create logs directory
+- [X] Initialize logging system
 
 ---
 

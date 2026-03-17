@@ -19,7 +19,8 @@ ENV/
 # uv package manager
 # ============================================
 
-uv.lock
+# add the in .gitignore if you prefer
+# uv.lock
 
 # ============================================
 # Build artifacts
