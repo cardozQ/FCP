@@ -9,13 +9,13 @@ Enable an autonomous research workflow where the model can search, open, extract
 
 # Phase 0 — Environment Setup
 
-- [ ] Install Python 3.11+
-- [ ] Create project repository
-- [ ] Create Python virtual environment
-- [ ] Activate virtual environment
-- [ ] Install dependencies
-- [ ] Install Playwright Firefox browser
-- [ ] Create requirements.txt
+- [X] Install Python 3.11+
+- [X] Create project repository
+- [X] Create Python virtual environment
+- [X] Activate virtual environment
+- [X] Install dependencies
+- [X] Install Playwright Firefox browser
+- [X] Create requirements.txt
 
 Dependencies:
 
