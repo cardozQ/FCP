@@ -104,11 +104,11 @@ Define clean interfaces between modules.
 
 Tasks:
 
-- [ ] Define search result schema
-- [ ] Define extracted content schema
-- [ ] Define state structure
-- [ ] Define controller response format
-- [ ] Define MCP tool input/output schema
+- [X] Define search result schema
+- [X] Define extracted content schema
+- [X] Define state structure
+- [X] Define controller response format
+- [X] Define MCP tool input/output schema
 
 Example:
 
