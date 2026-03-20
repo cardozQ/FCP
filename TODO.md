@@ -220,12 +220,12 @@ snippet
 
 Tasks:
 
-- [ ] Implement DuckDuckGo search
-- [ ] Parse results using BeautifulSoup
-- [ ] Return top 5 results
-- [ ] Handle empty search results
-- [ ] Add request timeout
-- [ ] Add retry mechanism
+- [X] Implement DuckDuckGo search
+- [X] Parse results using BeautifulSoup
+- [X] Return top 5 results
+- [X] Handle empty search results
+- [X] Add request timeout
+- [X] Add retry mechanism
 
 ---
 
@@ -258,13 +258,13 @@ code_blocks
 
 Tasks:
 
-- [ ] Implement readability extraction
-- [ ] Remove navigation bars
-- [ ] Remove scripts
-- [ ] Extract headings
-- [ ] Extract code blocks
-- [ ] Split content into chunks
-- [ ] Limit response size
+- [X] Implement readability extraction
+- [X] Remove navigation bars
+- [X] Remove scripts
+- [X] Extract headings
+- [X] Extract code blocks
+- [X] Split content into chunks
+- [X] Limit response size
 
 ---
 
@@ -281,10 +281,10 @@ Strategies:
 
 Tasks:
 
-- [ ] Implement MAX_CONTENT_CHARS guard
-- [ ] Implement response truncation
-- [ ] Implement section extraction
-- [ ] Implement caching of extracted content
+- [X] Implement MAX_CONTENT_CHARS guard
+- [X] Implement response truncation
+- [X] Implement section extraction
+- [X] Implement caching of extracted content
 
 Example constant:
 
@@ -305,11 +305,11 @@ utils.py responsibilities:
 
 Tasks:
 
-- [ ] Implement rate limiter
-- [ ] Implement text truncation
-- [ ] Implement URL validator
-- [ ] Implement retry logic
-- [ ] Implement response formatting
+- [X] Implement rate limiter
+- [X] Implement text truncation
+- [X] Implement URL validator
+- [X] Implement retry logic
+- [X] Implement response formatting
 
 ---
 
@@ -340,10 +340,10 @@ web.history()
 
 Tasks:
 
-- [ ] Implement MCP server
-- [ ] Register tools
-- [ ] Connect controller layer
-- [ ] Implement error handling
+- [X] Implement MCP server
+- [X] Register tools
+- [X] Connect controller layer
+- [X] Implement error handling
 
 ---
 
@@ -357,12 +357,12 @@ logs/mcp.log
 
 Tasks:
 
-- [ ] Initialize logging
-- [ ] Log search queries
-- [ ] Log visited URLs
-- [ ] Log extraction size
-- [ ] Log tool usage
-- [ ] Log errors
+- [X] Initialize logging
+- [X] Log search queries
+- [X] Log visited URLs
+- [X] Log extraction size
+- [X] Log tool usage
+- [X] Log errors
 
 ---
 
@@ -383,10 +383,10 @@ config/mcp.json example:
 
 Tasks:
 
-- [ ] Create MCP configuration
-- [ ] Register MCP server
-- [ ] Restart Zed IDE
-- [ ] Test Codex tool usage
+- [X] Create MCP configuration
+- [X] Register MCP server
+- [X] Restart Zed IDE
+- [X] Test Codex tool usage
 
 ---
 
@@ -406,10 +406,10 @@ Agent workflow:
 
 Tasks:
 
-- [ ] Design browsing strategy
-- [ ] Ensure structured responses
-- [ ] Enable multi-page exploration
-- [ ] Ensure minimal token usage
+- [X] Design browsing strategy
+- [X] Ensure structured responses
+- [X] Enable multi-page exploration
+- [X] Ensure minimal token usage
 
 ---
 
@@ -453,10 +453,10 @@ docs/architecture.md should include:
 
 Tasks:
 
-- [ ] Write architecture documentation
-- [ ] Write installation guide
-- [ ] Write usage examples
-- [ ] Write developer guide
+- [X] Write architecture documentation
+- [X] Write installation guide
+- [X] Write usage examples
+- [X] Write developer guide
 
 ---
 

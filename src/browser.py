@@ -5,6 +5,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 from src.state import state
+from src.utils import normalize_url, validate_url
 
 DEFAULT_TIMEOUT = 10000  # 10 seconds
 
@@ -36,8 +37,9 @@ class Browser:
         try:
             self.launch()
 
-            if not url.startswith("http"):
-                url = "https://" + url
+            url = normalize_url(url)
+            if not validate_url(url):
+                return False
 
             self.page.goto(url, timeout=DEFAULT_TIMEOUT)
             self.page.wait_for_load_state("domcontentloaded")

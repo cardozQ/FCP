@@ -8,6 +8,7 @@ class BrowserState:
         self.current_url: Optional[str] = None
         self.history: List[str] = []
         self.visited_urls: set[str] = set()
+        self.last_query: Optional[str] = None
         self.last_search_results: List[Dict] = []
         self.cache: Dict[str, Dict] = {}
 
@@ -38,8 +39,28 @@ class BrowserState:
     def set_search_results(self, results: List[Dict]):
         self.last_search_results = results
 
+    def set_last_results(self, results: List[Dict]):
+        self.set_search_results(results)
+
+    def set_last_query(self, query: str):
+        self.last_query = query
+
+    def get_last_query(self) -> Optional[str]:
+        return self.last_query
+
     def get_search_results(self) -> List[Dict]:
         return self.last_search_results
+
+    def get_last_results(self) -> List[Dict]:
+        return self.get_search_results()
+
+    def get_search_result(self, index: int) -> Optional[Dict]:
+        if index < 0 or index >= len(self.last_search_results):
+            return None
+        return self.last_search_results[index]
+
+    def add_to_history(self, url: str):
+        self.history.append(url)
 
     # ----------------------------
     # Cache System (with limit)
@@ -54,6 +75,9 @@ class BrowserState:
     def get_cached(self, url: str) -> Optional[Dict]:
         return self.cache.get(url)
 
+    def get_cached_content(self, url: str) -> Optional[Dict]:
+        return self.get_cached(url)
+
     # ----------------------------
     # Reset State
     # ----------------------------
@@ -62,8 +86,13 @@ class BrowserState:
         self.current_url = None
         self.history.clear()
         self.visited_urls.clear()
+        self.last_query = None
         self.last_search_results = []
         self.cache.clear()
 
 
 state = BrowserState()
+
+
+class State(BrowserState):
+    pass

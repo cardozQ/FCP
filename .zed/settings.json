@@ -1,8 +1,10 @@
 {
-  "mcpServers": {
+  "context_servers": {
     "firefox-web": {
       "command": "/home/patrick/Experiments/FCP/.venv/bin/python",
-      "args": ["/home/patrick/Experiments/FCP/src/server.py"]
+      "args": [
+        "/home/patrick/Experiments/FCP/src/server.py"
+      ]
     }
   }
 }

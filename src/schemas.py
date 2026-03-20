@@ -47,6 +47,10 @@ class ExtractedContent(TypedDict):
     headings: List[str]
     content: str
     code_blocks: List[str]
+    sections: List[Dict[str, str]]
+    chunks: List[str]
+    truncated: bool
+    content_chars: int
 
 
 # ----------------------------------------
@@ -95,6 +99,16 @@ class OpenInput(TypedDict):
 
 class FindInput(TypedDict):
     text: str
+
+
+class OpenResultInput(TypedDict):
+    index: int
+
+
+class ResearchInput(TypedDict):
+    query: str
+    result_index: int
+    max_related_links: int
 
 
 # ----------------------------------------
